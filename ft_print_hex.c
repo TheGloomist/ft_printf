@@ -6,7 +6,7 @@
 /*   By: izaitcev <izaitcev@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/06/21 15:58:31 by izaitcev      #+#    #+#                 */
-/*   Updated: 2022/06/28 16:32:05 by izaitcev      ########   odam.nl         */
+/*   Updated: 2022/07/11 16:32:25 by izaitcev      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	print_lhex(unsigned long n)
 	return (write(1, &hex_str_low[n], 1));
 }
 
-int	print_uphex(unsigned long n)
+int	print_uphex(unsigned int n)
 {
 	char	*hex_str_up;
 
