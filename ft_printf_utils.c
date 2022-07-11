@@ -6,7 +6,7 @@
 /*   By: izaitcev <izaitcev@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/06/18 21:56:20 by izaitcev      #+#    #+#                 */
-/*   Updated: 2022/06/28 16:46:48 by izaitcev      ########   odam.nl         */
+/*   Updated: 2022/07/11 16:36:54 by izaitcev      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,9 +36,4 @@ int	print_char(int c, size_t *len)
 {
 	*len = *len + 1;
 	return (write(1, &c, 1));
-}
-
-int	print_percent(int c)
-{
-	return (write(1, "%", 1));
 }

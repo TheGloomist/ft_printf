@@ -6,7 +6,7 @@
 /*   By: izaitcev <izaitcev@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/05/16 16:31:44 by izaitcev      #+#    #+#                 */
-/*   Updated: 2022/07/11 16:32:27 by izaitcev      ########   odam.nl         */
+/*   Updated: 2022/07/11 16:36:46 by izaitcev      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,5 @@ int	print_nbr(int n);
 int	print_unsigned_dec(unsigned int n);
 int	print_lhex(unsigned long n);
 int	print_uphex(unsigned int n);
-int	print_percent(int c);
 
 #endif
