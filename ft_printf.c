@@ -6,7 +6,7 @@
 /*   By: izaitcev <izaitcev@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/05/16 16:28:47 by izaitcev      #+#    #+#                 */
-/*   Updated: 2022/06/28 16:45:22 by izaitcev      ########   odam.nl         */
+/*   Updated: 2022/07/11 16:15:14 by izaitcev      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,9 @@ static int	check_conv(va_list args, char format)
 	else if (format == 'u')
 		len += print_unsigned_dec(va_arg(args, unsigned int));
 	else if (format == 'x')
-		len += print_lhex(va_arg(args, unsigned long));
+		len += print_lhex(va_arg(args, unsigned int));
 	else if (format == 'X')
-		len += print_uphex(va_arg(args, unsigned long));
+		len += print_uphex(va_arg(args, unsigned int));
 	else if (format == '%')
 		len += print_percent(va_arg(args, int));
 	else
