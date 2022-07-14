@@ -12,49 +12,27 @@
 
 #include "ft_printf.h"
 
-int	print_nbr(int num)
+int	print_nbr(long int num)
 {
-	size_t	len;
-	long	n;
+	char	c;
 
-	n = num;
-	len = 0;
-	if (n < 0)
+	if (num < 0)
 	{
-		print_char('-', &len);
-		n = n * -1;
-		if (n > 10)
-		{
-			print_nbr(n / 10);
-			len++;
-		}
-		print_char(n % 10 + '0', &len);
+		print_char('-');
+		num = num * -1;
 	}
-	else if (n >= 10)
-	{
-		print_nbr(n / 10);
-		len++;
-		print_char(n % 10 + '0', &len);
-	}
-	else
-		print_char(n + '0', &len);
-	return (len);
+	if (num >= 10)
+		return (print_nbr(num / 10) + print_nbr(num % 10));
+	c = num + '0';
+	return (write(1, &c, 1));
 }
 
 int	print_unsigned_dec(unsigned int num)
 {
-	size_t			len;
-	unsigned long	n;
+	char	c;
 
-	len = 0;
-	n = num;
-	if (n >= 10)
-	{
-		print_nbr(n / 10);
-		len++;
-		print_char(n % 10 + '0', &len);
-	}
-	else
-		print_char(n + '0', &len);
-	return (len);
+	if (num >= 10)
+		return (print_unsigned_dec(num / 10) + print_unsigned_dec(num % 10));
+	c = num + '0';
+	return (write(1, &c, 1));
 }

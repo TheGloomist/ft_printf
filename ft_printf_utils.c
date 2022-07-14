@@ -32,8 +32,7 @@ int	print_str(char *str)
 	return (write(1, str, str_len));
 }
 
-int	print_char(int c, size_t *len)
+int	print_char(int c)
 {
-	*len = *len + 1;
 	return (write(1, &c, 1));
 }
