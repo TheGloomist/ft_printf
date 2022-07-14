@@ -6,7 +6,7 @@
 /*   By: izaitcev <izaitcev@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/05/16 16:28:47 by izaitcev      #+#    #+#                 */
-/*   Updated: 2022/07/11 17:32:07 by izaitcev      ########   odam.nl         */
+/*   Updated: 2022/07/14 18:09:56 by izaitcev      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ static int	check_conv(va_list args, char format)
 
 	len = 0;
 	if (format == 'c')
-		print_char(va_arg(args, int));
+		len += print_char(va_arg(args, int));
 	else if (format == 's')
 		len += print_str(va_arg(args, char *));
 	else if (format == 'p')
