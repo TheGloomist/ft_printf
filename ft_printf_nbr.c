@@ -6,7 +6,7 @@
 /*   By: izaitcev <izaitcev@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/06/18 21:56:17 by izaitcev      #+#    #+#                 */
-/*   Updated: 2022/06/21 15:55:09 by izaitcev      ########   odam.nl         */
+/*   Updated: 2022/07/14 18:19:53 by izaitcev      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,18 @@
 int	print_nbr(long int num)
 {
 	char	c;
+	int		neg;
 
+	neg = 0;
 	if (num < 0)
 	{
-		print_char('-');
 		num = num * -1;
+		neg = print_char('-');
 	}
 	if (num >= 10)
-		return (print_nbr(num / 10) + print_nbr(num % 10));
+		return (print_nbr(num / 10) + print_nbr(num % 10) + neg);
 	c = num + '0';
-	return (write(1, &c, 1));
+	return (write(1, &c, 1) + neg);
 }
 
 int	print_unsigned_dec(unsigned int num)
