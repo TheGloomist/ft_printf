@@ -6,7 +6,7 @@
 /*   By: izaitcev <izaitcev@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/06/18 21:56:20 by izaitcev      #+#    #+#                 */
-/*   Updated: 2022/07/11 16:36:54 by izaitcev      ########   odam.nl         */
+/*   Updated: 2022/07/16 12:03:36 by izaitcev      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int	print_str(char *str)
 	size_t	str_len;
 
 	if (!str)
-		return (write(1, "(null)", 7));
+		return (write(1, "(null)", 6));
 	str_len = ft_strlen(str);
 	return (write(1, str, str_len));
 }
